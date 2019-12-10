@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# version: 1.0.0
-# date: 2019-11-04
+# version: 1.0.1
+# date: 2019-12-10
 
 ### Colors ###
 RED='\e[0;31m'
@@ -100,8 +100,8 @@ create_targetcli_luns() {
       echo -e "${LTCYAN}-Installing required packages ...${NC}"
       echo -e "${GREEN}COMMAND: ${GRAY}sudo zypper -n ref${NC}"
       sudo zypper -n ref
-      echo -e "${GREEN}COMMAND: ${GRAY}sudo zypper -n install targetcli-fb dbus-1-python${NC}"
-      sudo zypper -n install targetcli-fb dbus-1-python
+      echo -e "${GREEN}COMMAND: ${GRAY}sudo zypper -n install targetcli-fb${NC}"
+      sudo zypper -n install targetcli-fb
       echo
     fi
   fi
