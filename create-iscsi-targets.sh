@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# version: 1.0.1
+# version: 1.0.2
 # date: 2019-12-10
 
 ### Colors ###
@@ -137,8 +137,8 @@ create_targetcli_luns() {
     echo
     for INITIATOR in ${INITIATOR_LIST}
     do
-      echo -e "${GREEN}COMMAND: ${GRAY}sudo targetcli iscsi/${SERVER_IQN}:${TAREGT_NAME}/tpg1/acls/ create ${IQN}:${INITIATOR}${NC}"
-      sudo targetcli iscsi/${SERVER_IQN}:${TAREGT_NAME}/tpg1/acls/ create ${IQN}:${INITIATOR}
+      echo -e "${GREEN}COMMAND: ${GRAY}sudo targetcli iscsi/${SERVER_IQN}:${TARGET}/tpg1/acls/ create ${IQN}:${INITIATOR}${NC}"
+      sudo targetcli iscsi/${SERVER_IQN}:${TARGET}/tpg1/acls/ create ${IQN}:${INITIATOR}
     done
     echo
   done
